@@ -21,4 +21,9 @@
 - Code Of Conduct document
 - Company logo
 
+> Chess Engine (Initial Build Process)
+- Tile Class
+- Immutability Enhancements to the Tile Class
+- Piece Class
+
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
