@@ -25,5 +25,6 @@
 - Tile Class
 - Immutability Enhancements to the Tile Class
 - Piece Class
+- The Knight
 
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
