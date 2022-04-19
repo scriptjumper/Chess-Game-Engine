@@ -27,5 +27,6 @@
 - Piece Class
 - The Knight
 - Move Class
+- Bishop Class
 
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
