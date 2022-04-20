@@ -33,5 +33,6 @@
 - [Pawn Class](https://en.wikipedia.org/wiki/Pawn_(chess))
 - [King Class](https://en.wikipedia.org/wiki/King_(chess))
 - Board Class
+- Player Class
 
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
