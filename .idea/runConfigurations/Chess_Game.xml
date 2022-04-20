@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="JChess" type="Application" factoryName="Application" nameIsGenerated="true">
+  <configuration default="false" name="Chess Game" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.chess.engine.JChess" />
-    <module name="Java-Chess-Engine" />
+    <module name="Chess-Game-Engine" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.chess.engine.*" />
