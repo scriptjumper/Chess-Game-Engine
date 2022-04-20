@@ -29,5 +29,6 @@
 - Move Class
 - [Bishop Class](https://en.wikipedia.org/wiki/Bishop_(chess))
 - [Rook Class](https://en.wikipedia.org/wiki/Rook_(chess))
+- [Queen Class](https://en.wikipedia.org/wiki/Queen_(chess))
 
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
