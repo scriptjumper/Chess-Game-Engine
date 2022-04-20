@@ -25,8 +25,9 @@
 - Tile Class
 - Immutability Enhancements to the Tile Class
 - Piece Class
-- The Knight
+- [Knight Class](https://en.wikipedia.org/wiki/Knight_(chess))
 - Move Class
-- Bishop Class
+- [Bishop Class](https://en.wikipedia.org/wiki/Bishop_(chess))
+- [Rook Class](https://en.wikipedia.org/wiki/Rook_(chess))
 
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
