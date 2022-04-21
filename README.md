@@ -77,7 +77,9 @@ To get a local copy up and running follow these simple example steps.
    git clone https://github.com/scriptjumper/Java-Chess-Engine.git
    ```
 2. Open project with IntelliJ and let the IDE sync the files
-3. Run the `Chess Game` config (run config in the app)
+3. Install the `guava-18.0` package (Project Structure->Libraries->New (From maven) and search for `google.guava` then select version `18.0`
+4. Rebuild the project
+5. Run the `Chess Game` config (run config in the app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
