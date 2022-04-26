@@ -36,5 +36,14 @@
 - Player Class
 - Move Class 
     - [Castling](https://en.wikipedia.org/wiki/Castling)
+- Chess Board GUI
+    - Game Board Frame
+    - Tile Colors
+    - Tile Pieces
+    - Mouse Click Events
+    - Preference (Showing legal moves)
+    - Bug fixes
+        - Attacking pawn moves
+        - Piece First Move
 
 <!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
