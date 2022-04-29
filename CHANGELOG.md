@@ -9,7 +9,7 @@
 - `Security` in case of vulnerabilities. -->
 
 
-## [0.1.0] - 2022-04-16
+## [1.0.0] - 2022-04-16
 
 ### Added
 
@@ -45,5 +45,7 @@
     - Bug fixes
         - Attacking pawn moves
         - Piece First Move
+        - Pieces taken panel
+        - Moved pieces panel
 
-<!-- [0.1.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-0.1.0 -->
+<!-- [1.0.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-1.0.0 -->
