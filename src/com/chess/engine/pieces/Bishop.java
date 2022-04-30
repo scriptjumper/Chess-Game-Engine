@@ -4,7 +4,6 @@ import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
-import com.chess.engine.board.Move.AttackMove;
 import com.chess.engine.board.Move.MajorAttackMove;
 import com.chess.engine.board.Move.MajorMove;
 import com.chess.engine.board.Tile;
@@ -76,6 +75,6 @@ public class Bishop extends Piece {
     }
 
     private static boolean isEighthColumnExclusion(final int currentPosition, final int candidateOffset) {
-        return BoardUtils.EIGHT_COLUMN[currentPosition] && (candidateOffset == -7 || candidateOffset == 9);
+        return BoardUtils.EIGHTH_COLUMN[currentPosition] && (candidateOffset == -7 || candidateOffset == 9);
     }
 }
