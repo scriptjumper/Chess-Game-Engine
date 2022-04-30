@@ -10,7 +10,7 @@
   <h3 align="center">Java Chess Engine</h3>
 
   <p align="center">
-    A functional game of chess.
+    Reproduce and analyse your games or the positions you want. You can import your game in PGN notation or set up a position from a FEN. You can analyse your positions and games online with a powerful chess engine.
     <br />
     <br />
     <a href="https://github.com/scriptjumper/Java-Chess-Engine/issues/new?assignees=&labels=bug&template=bug-report.md&title=%5BBug%5D%3A">Report Bug</a>

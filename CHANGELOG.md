@@ -31,6 +31,7 @@
 - [Rook Class](https://en.wikipedia.org/wiki/Rook_(chess))
 - [Queen Class](https://en.wikipedia.org/wiki/Queen_(chess))
 - [Pawn Class](https://en.wikipedia.org/wiki/Pawn_(chess))
+    - [En Passant](https://en.wikipedia.org/wiki/En_passant)
 - [King Class](https://en.wikipedia.org/wiki/Castling)
 - Board Class
 - Player Class
