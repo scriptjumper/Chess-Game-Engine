@@ -49,5 +49,6 @@
         - Piece First Move
         - Pieces taken panel
         - Moved pieces panel
+- Unit Tests
 
 <!-- [1.0.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-1.0.0 -->
