@@ -55,5 +55,6 @@
 - [Minimax](https://en.wikipedia.org/wiki/Minimax)
 - Adding the AI to the GUI
 - Fixes to the taken pieces icons absolute path
+- [FEN](https://en.wikipedia.org/wiki/Forsyth-Edwards_Notation) file integration
 
 <!-- [1.0.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-1.0.0 -->

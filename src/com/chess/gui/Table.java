@@ -112,15 +112,15 @@ public class Table extends Observable {
     private JMenu createFileMenu() {
         final JMenu fileMenu = new JMenu("File");
 
-        final JMenuItem openPGN = new JMenuItem("Load PGN File");
-        openPGN.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Opening up PGN file!");
-            }
-        });
-
-        fileMenu.add(openPGN);
+//        final JMenuItem openPGN = new JMenuItem("Load PGN File");
+//        openPGN.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                System.out.println("Opening up PGN file!");
+//            }
+//        });
+//
+//        fileMenu.add(openPGN);
 
         final JMenuItem exitMenuItem = new JMenuItem("Exit");
         exitMenuItem.addActionListener(new ActionListener() {
