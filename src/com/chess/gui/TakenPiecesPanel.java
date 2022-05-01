@@ -21,7 +21,7 @@ public class TakenPiecesPanel extends JPanel {
     private final JPanel northPanel;
     private final JPanel southPanel;
 
-    private static final Color PANEL_COLOR = Color.decode("0xFDFE6");
+    private static final Color PANEL_COLOR = Color.white;
     private static final Dimension TAKEN_PIECES_DIMENSION = new Dimension(40, 80);
     private static final EtchedBorder PANEL_BORDER = new EtchedBorder(EtchedBorder.RAISED);
 
@@ -75,10 +75,11 @@ public class TakenPiecesPanel extends JPanel {
 
         for (final Piece takenPiece : whiteTakenPieces) {
             try {
-                final BufferedImage  image = ImageIO.read(new File("art/pieces/plain"
-                        + takenPiece.getPieceAlliance().toString().substring(0, 1) + "" + takenPiece.toString()));
+                final BufferedImage image = ImageIO.read(new File("art/pieces/plain/"
+                        + takenPiece.getPieceAlliance().toString().substring(0, 1) + takenPiece.toString() + ".gif"));
+                System.out.println(image);
                 final ImageIcon icon = new ImageIcon(image);
-                final JLabel imageLabel = new JLabel();
+                final JLabel imageLabel = new JLabel(icon);
                 this.southPanel.add(imageLabel);
             } catch (final IOException e) {
                 e.printStackTrace();
@@ -87,10 +88,10 @@ public class TakenPiecesPanel extends JPanel {
 
         for (final Piece takenPiece : blackTakenPieces) {
             try {
-                final BufferedImage  image = ImageIO.read(new File("art/pieces/plain"
-                        + takenPiece.getPieceAlliance().toString().substring(0, 1) + "" + takenPiece.toString()));
+                final BufferedImage image = ImageIO.read(new File("art/pieces/plain/"
+                        + takenPiece.getPieceAlliance().toString().substring(0, 1) + takenPiece.toString() + ".gif"));
                 final ImageIcon icon = new ImageIcon(image);
-                final JLabel imageLabel = new JLabel();
+                final JLabel imageLabel = new JLabel(icon);
                 this.southPanel.add(imageLabel);
             } catch (final IOException e) {
                 e.printStackTrace();
