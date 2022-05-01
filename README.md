@@ -16,8 +16,6 @@
     <a href="https://github.com/scriptjumper/Java-Chess-Engine/issues/new?assignees=&labels=bug&template=bug-report.md&title=%5BBug%5D%3A">Report Bug</a>
     ·
     <a href="https://github.com/scriptjumper/Java-Chess-Engine/issues/new?assignees=&labels=enhancement&template=feature-request.md&title=%5BFeature%5D%3A">Request Feature</a>
-    ·
-    <a href="https://github.com/scriptjumper/Java-Chess-Engine/issues/new?assignees=&labels=task&template=task.md&title=%5BTask%5D%3A">Create A Task</a>
   </p>
 </div>
 

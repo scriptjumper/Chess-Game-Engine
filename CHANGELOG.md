@@ -9,7 +9,7 @@
 - `Security` in case of vulnerabilities. -->
 
 
-## [1.0.0] - 2022-04-30
+## [1.0.0] - 2022-05-01
 
 ### Added
 
@@ -50,5 +50,8 @@
         - Pieces taken panel
         - Moved pieces panel
 - Unit Tests
+    - Testing AI Movement
+    - [Fool's Mate](https://en.wikipedia.org/wiki/Fool's_mate)
+- [Minimax](https://en.wikipedia.org/wiki/Minimax)
 
 <!-- [1.0.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-1.0.0 -->
