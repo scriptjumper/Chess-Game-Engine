@@ -77,14 +77,6 @@ public class Board {
         return this.whitePieces;
     }
 
-    private static String prettyPrint(Tile tile) {
-        if (tile.isTileOccupied()) {
-            return tile.getPiece().getPieceAlliance().isBlack() ? tile.toString().toLowerCase() : tile.toString();
-        }
-
-        return tile.toString();
-    }
-
     private Collection<Move> calculateLegalMoves(final Collection<Piece> pieces) {
         final List<Move> legalMoves = new ArrayList<>();
 
@@ -188,9 +180,8 @@ public class Board {
             return this;
         }
 
-        public Builder setMoveMaker(final Alliance nextMoveMaker) {
+        public void setMoveMaker(final Alliance nextMoveMaker) {
             this.nextMoveMaker = nextMoveMaker;
-            return this;
         }
 
         public Board build() {
@@ -201,5 +192,4 @@ public class Board {
             this.enPassantPawn = enPassantPawn;
         }
     }
-
 }

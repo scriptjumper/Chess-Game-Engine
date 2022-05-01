@@ -146,9 +146,8 @@ public class GameHistoryPanel extends JPanel {
         private String whiteMove;
         private String blackMove;
 
-        Row() {
-            //
-        }
+        // Initialising Class
+        Row() {}
 
         public String getWhiteMove() {
             return this.whiteMove;

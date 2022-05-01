@@ -54,19 +54,19 @@ public class TakenPiecesPanel extends JPanel {
                 } else if (takenPiece.getPieceAlliance().isBlack()) {
                     blackTakenPieces.add(takenPiece);
                 } else {
-                    throw new RuntimeException("No pieces was taken!"); // TODO: Change message here
+                    throw new RuntimeException("Should not reach this case!");
                 }
             }
         }
 
-        Collections.sort(whiteTakenPieces, new Comparator<Piece>() {
+        whiteTakenPieces.sort(new Comparator<Piece>() {
             @Override
             public int compare(Piece o1, Piece o2) {
                 return Ints.compare(o1.getPieceValue(), o2.getPieceValue());
             }
         });
 
-        Collections.sort(blackTakenPieces, new Comparator<Piece>() {
+        blackTakenPieces.sort(new Comparator<Piece>() {
             @Override
             public int compare(Piece o1, Piece o2) {
                 return Ints.compare(o1.getPieceValue(), o2.getPieceValue());
@@ -76,7 +76,7 @@ public class TakenPiecesPanel extends JPanel {
         for (final Piece takenPiece : whiteTakenPieces) {
             try {
                 final BufferedImage image = ImageIO.read(new File("art/pieces/plain/"
-                        + takenPiece.getPieceAlliance().toString().substring(0, 1) + takenPiece.toString() + ".gif"));
+                        + takenPiece.getPieceAlliance().toString().charAt(0) + takenPiece.toString() + ".gif"));
                 System.out.println(image);
                 final ImageIcon icon = new ImageIcon(image);
                 final JLabel imageLabel = new JLabel(icon);
@@ -89,7 +89,7 @@ public class TakenPiecesPanel extends JPanel {
         for (final Piece takenPiece : blackTakenPieces) {
             try {
                 final BufferedImage image = ImageIO.read(new File("art/pieces/plain/"
-                        + takenPiece.getPieceAlliance().toString().substring(0, 1) + takenPiece.toString() + ".gif"));
+                        + takenPiece.getPieceAlliance().toString().charAt(0) + takenPiece.toString() + ".gif"));
                 final ImageIcon icon = new ImageIcon(image);
                 final JLabel imageLabel = new JLabel(icon);
                 this.southPanel.add(imageLabel);

@@ -95,7 +95,6 @@ public class Pawn extends Piece {
                     }
                 }
             }
-
         }
 
         return ImmutableList.copyOf(legalMoves);

@@ -9,7 +9,6 @@ import com.chess.engine.board.Move.MajorMove;
 import com.chess.engine.board.Tile;
 import com.google.common.collect.ImmutableList;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -42,10 +41,6 @@ public class King extends Piece {
         this.isCastled = isCastled;
         this.kingSideCastleCapable = kingSideCastleCapable;
         this.queenSideCastleCapable = queenSideCastleCapable;
-    }
-
-    public boolean isCastled() {
-        return this.isCastled;
     }
 
     public boolean isKingSideCastleCapable() {

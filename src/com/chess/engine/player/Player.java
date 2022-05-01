@@ -64,11 +64,11 @@ public abstract class Player {
     }
 
     public boolean isInCheckMate() {
-        return this.isInCheck && !hasEscapeMoves();
+        return this.isInCheck && hasEscapeMoves();
     }
 
     public boolean isInStaleMate() {
-        return !this.isInCheck && !hasEscapeMoves();
+        return !this.isInCheck && hasEscapeMoves();
     }
 
     public boolean isKingSideCastleCapable() {
@@ -85,11 +85,11 @@ public abstract class Player {
             final MoveTransition transition = makeMove(move);
 
             if (transition.getMoveStatus().isDone()) {
-                return true;
+                return false;
             }
         }
 
-        return false;
+        return true;
     }
 
     public boolean isCastled() {

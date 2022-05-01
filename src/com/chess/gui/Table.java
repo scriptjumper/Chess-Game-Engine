@@ -29,7 +29,6 @@ import static javax.swing.SwingUtilities.isLeftMouseButton;
 import static javax.swing.SwingUtilities.isRightMouseButton;
 
 public class Table extends Observable {
-    private final JFrame gameFrame;
     private final GameHistoryPanel gameHistoryPanel;
     private final TakenPiecesPanel takenPiecesPanel;
     private final BoardPanel boardPanel;
@@ -43,43 +42,39 @@ public class Table extends Observable {
     private Piece humanMovedPiece;
     private BoardDirection boardDirection;
 
-    private Move computerMove;
-
     private boolean highlightLegalMoves;
 
     private final static Dimension OUTER_FRAME_DIMENSION = new Dimension(600, 600);
     private final static Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350);
     private final static Dimension TILE_PANEL_DIMENSION = new Dimension(10, 10);
 
-    private static String defaultPieceImagesPath = "art/pieces/plain/";
-
-    private Color lightTileColor = Color.decode("#FFFACD");
-    private Color darkTileColor = Color.decode("#593E1A");
+    private final Color lightTileColor = Color.decode("#FFFACD");
+    private final Color darkTileColor = Color.decode("#593E1A");
 
     private static final Table INSTANCE = new Table();
 
     private Table() {
-        this.gameFrame = new JFrame("Chess Engine");
-        this.gameFrame.setLayout(new BorderLayout());
+        JFrame gameFrame = new JFrame("Chess Engine");
+        gameFrame.setLayout(new BorderLayout());
 
         // Menu options
         final JMenuBar tableMenuBar = createTableMenuBar();
-        this.gameFrame.setJMenuBar(tableMenuBar);
+        gameFrame.setJMenuBar(tableMenuBar);
 
-        this.gameFrame.setSize(OUTER_FRAME_DIMENSION);
+        gameFrame.setSize(OUTER_FRAME_DIMENSION);
         this.chessBoard = Board.createStandardBoard();
         this.gameHistoryPanel = new GameHistoryPanel();
         this.takenPiecesPanel = new TakenPiecesPanel();
         this.boardPanel = new BoardPanel();
         this.moveLog = new MoveLog();
         this.addObserver(new TableGameAIWatcher());
-        this.gameSetup = new GameSetup(this.gameFrame, true);
+        this.gameSetup = new GameSetup(gameFrame, true);
         this.boardDirection = BoardDirection.NORMAL;
         this.highlightLegalMoves = false;
-        this.gameFrame.add(this.takenPiecesPanel, BorderLayout.WEST);
-        this.gameFrame.add(this.boardPanel, BorderLayout.CENTER);
-        this.gameFrame.add(this.gameHistoryPanel, BorderLayout.EAST);
-        this.gameFrame.setVisible(true);
+        gameFrame.add(this.takenPiecesPanel, BorderLayout.WEST);
+        gameFrame.add(this.boardPanel, BorderLayout.CENTER);
+        gameFrame.add(this.gameHistoryPanel, BorderLayout.EAST);
+        gameFrame.setVisible(true);
     }
 
     public static Table get() {
@@ -112,15 +107,15 @@ public class Table extends Observable {
     private JMenu createFileMenu() {
         final JMenu fileMenu = new JMenu("File");
 
-//        final JMenuItem openPGN = new JMenuItem("Load PGN File");
-//        openPGN.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                System.out.println("Opening up PGN file!");
-//            }
-//        });
-//
-//        fileMenu.add(openPGN);
+        /*final JMenuItem openPGN = new JMenuItem("Load PGN File");
+        openPGN.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Opening up PGN file!");
+            }
+        });
+
+        fileMenu.add(openPGN);*/
 
         final JMenuItem exitMenuItem = new JMenuItem("Exit");
         exitMenuItem.addActionListener(new ActionListener() {
@@ -207,7 +202,6 @@ public class Table extends Observable {
     }
 
     public void updateComputerMove(final Move move) {
-        this.computerMove = move;
     }
 
     private MoveLog getMoveLog() {
@@ -239,8 +233,7 @@ public class Table extends Observable {
         @Override
         protected Move doInBackground() throws Exception {
             final MoveStrategy miniMax = new MiniMax(4);
-            final Move bestMove = miniMax.execute(Table.get().getGameBoard());
-            return bestMove;
+            return miniMax.execute(Table.get().getGameBoard());
         }
 
         @Override
@@ -255,9 +248,7 @@ public class Table extends Observable {
                 Table.get().getTakenPiecesPanel().redo(Table.get().getMoveLog());
                 Table.get().getBoardPanel().drawBoard(Table.get().getGameBoard());
                 Table.get().moveMadeUpdate(PlayerType.COMPUTER);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
         }
@@ -416,22 +407,22 @@ public class Table extends Observable {
 
                 @Override
                 public void mousePressed(final MouseEvent e) {
-                    //
+                    // Just a placeholder function
                 }
 
                 @Override
                 public void mouseReleased(final MouseEvent e) {
-                    //
+                    // Just a placeholder function
                 }
 
                 @Override
                 public void mouseEntered(final MouseEvent e) {
-                    //
+                    // Just a placeholder function
                 }
 
                 @Override
                 public void mouseExited(final MouseEvent e) {
-                    //
+                    // Just a placeholder function
                 }
             });
 
@@ -450,8 +441,9 @@ public class Table extends Observable {
             this.removeAll();
             if (board.getTile(this.tileId).isTileOccupied()) {
                 try {
+                    String defaultPieceImagesPath = "art/pieces/plain/";
                     final BufferedImage image = ImageIO.read(new File(defaultPieceImagesPath +
-                            board.getTile(this.tileId).getPiece().getPieceAlliance().toString().substring(0, 1) +
+                            board.getTile(this.tileId).getPiece().getPieceAlliance().toString().charAt(0) +
                             board.getTile(this.tileId).getPiece().toString() + ".gif"));
 
                     add(new JLabel(new ImageIcon(image)));

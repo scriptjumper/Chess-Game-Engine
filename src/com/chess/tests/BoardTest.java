@@ -1,4 +1,4 @@
-package com.tests.chess.engine.board;
+package com.chess.tests;
 
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
@@ -10,14 +10,13 @@ import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.ai.MiniMax;
 import com.chess.engine.player.ai.MoveStrategy;
 import com.google.common.collect.Iterables;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static junit.framework.TestCase.*;
 
-class BoardTest {
+public class BoardTest {
     @Test
     public void initialBoard() {
-
         final Board board = Board.createStandardBoard();
         assertEquals(board.currentPlayer().getLegalMoves().size(), 20);
         assertEquals(board.currentPlayer().getOpponent().getLegalMoves().size(), 20);
@@ -31,8 +30,8 @@ class BoardTest {
         assertFalse(board.currentPlayer().getOpponent().isInCheckMate());
         assertFalse(board.currentPlayer().getOpponent().isCastled());
 
-        assertTrue(board.whitePlayer().toString().equals("White"));
-        assertTrue(board.blackPlayer().toString().equals("Black"));
+        assertTrue(board.whitePlayer().toString().contains("White"));
+        assertTrue(board.blackPlayer().toString().contains("Black"));
 
         final Iterable<Move> allMoves = Iterables.concat(board.whitePlayer().getLegalMoves(), board.blackPlayer().getLegalMoves());
         for(final Move move : allMoves) {
@@ -46,16 +45,18 @@ class BoardTest {
     @Test
     public void testPlainKingMove() {
         final Board.Builder builder = new Board.Builder();
+
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK, true, true));
         builder.setPiece(new Pawn( 12, Alliance.BLACK));
+
         // White Layout
         builder.setPiece(new Pawn(52, Alliance.WHITE));
         builder.setPiece(new King(60, Alliance.WHITE, true, true));
         builder.setMoveMaker(Alliance.WHITE);
+
         // Set the current player
         final Board board = builder.build();
-        System.out.println(board);
 
         assertEquals(board.whitePlayer().getLegalMoves().size(), 6);
         assertEquals(board.blackPlayer().getLegalMoves().size(), 6);
@@ -82,7 +83,6 @@ class BoardTest {
         Board board = Board.createStandardBoard();
         end =  runtime.freeMemory();
         System.out.println("That took " + (start-end) + " bytes.");
-
     }
 
     @Test

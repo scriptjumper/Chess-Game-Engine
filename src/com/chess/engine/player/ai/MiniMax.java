@@ -30,8 +30,6 @@ public class MiniMax implements MoveStrategy {
 
         System.out.println(board.currentPlayer() + " THINKING with depth = " + searchDepth);
 
-        int numMoves = board.currentPlayer().getLegalMoves().size();
-
         for (final Move move : board.currentPlayer().getLegalMoves()) {
             final MoveTransition moveTransition = board.currentPlayer().makeMove(move);
 
@@ -49,8 +47,6 @@ public class MiniMax implements MoveStrategy {
                 }
             }
         }
-
-        final long executionTime = System.currentTimeMillis() - startTime;
 
         return bestMove;
     }

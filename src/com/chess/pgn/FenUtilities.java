@@ -6,7 +6,7 @@ import com.chess.engine.pieces.Pawn;
 
 public class FenUtilities {
     private FenUtilities() {
-        throw new RuntimeException("Not instantiable!");
+        throw new RuntimeException("Cannot initialise this class!");
     }
 
     public static Board createGameBoardFromFen(final String fenString) {
