@@ -53,5 +53,6 @@
     - Testing AI Movement
     - [Fool's Mate](https://en.wikipedia.org/wiki/Fool's_mate)
 - [Minimax](https://en.wikipedia.org/wiki/Minimax)
+- Adding the AI to the GUI
 
 <!-- [1.0.0]: https://github.com/scriptjumper/Java-Chess-Engine/releases/tag/v-1.0.0 -->
